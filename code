@@ -1,0 +1,80 @@
+// C++ code //
+// Traffic Light 4 way using Arduino Uno //
+int r1_led = 1;
+int y1_led = 2;
+int g1_led = 3;
+int r2_led = 4;
+int y2_led = 5;
+int g2_led = 6;
+int r3_led = 7;
+int y3_led = 8;
+int g3_led = 9;
+int r4_led = 10;
+int y4_led = 11;
+int g4_led = 12;
+
+void setup()
+{
+  pinMode(r1_led, OUTPUT);
+  pinMode(y1_led, OUTPUT);
+  pinMode(g1_led, OUTPUT);
+  pinMode(r2_led, OUTPUT);
+  pinMode(y2_led, OUTPUT);
+  pinMode(g2_led, OUTPUT);
+  pinMode(r3_led, OUTPUT);
+  pinMode(y3_led, OUTPUT);
+  pinMode(g3_led, OUTPUT);
+  pinMode(r4_led, OUTPUT);
+  pinMode(y4_led, OUTPUT);
+  pinMode(g4_led, OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(g1_led, HIGH);
+  digitalWrite(r2_led, HIGH);
+  digitalWrite(r3_led, HIGH);
+  digitalWrite(r4_led, HIGH);
+  delay(15000); 
+  digitalWrite(y2_led, HIGH);
+  delay(5000); // Wait for 1000 millisecond(s)
+  digitalWrite(g1_led, LOW);
+  digitalWrite(y2_led, LOW);
+  digitalWrite(r2_led, LOW);
+  
+  digitalWrite(g2_led, HIGH);
+  digitalWrite(r1_led, HIGH);
+  digitalWrite(r3_led, HIGH);
+  digitalWrite(r4_led, HIGH);
+  delay(15000); 
+  digitalWrite(y3_led, HIGH);
+  delay(5000); // Wait for 1000 millisecond(s)
+  digitalWrite(g2_led, LOW);
+  digitalWrite(y3_led, LOW);
+  digitalWrite(r3_led, LOW);
+  
+  
+  digitalWrite(g3_led, HIGH);
+  digitalWrite(r1_led, HIGH);
+  digitalWrite(r2_led, HIGH);
+  digitalWrite(r4_led, HIGH);
+  delay(15000); 
+  digitalWrite(y4_led, HIGH);
+  delay(5000); // Wait for 1000 millisecond(s)
+  digitalWrite(g3_led, LOW);
+  digitalWrite(y4_led, LOW);
+  digitalWrite(r4_led, LOW);
+  
+  
+  digitalWrite(g4_led, HIGH);
+  digitalWrite(r1_led, HIGH);
+  digitalWrite(r2_led, HIGH);
+  digitalWrite(r3_led, HIGH);
+  delay(15000); 
+  digitalWrite(y1_led, HIGH);
+  delay(5000); // Wait for 1000 millisecond(s)
+  digitalWrite(g4_led, LOW);
+  digitalWrite(y1_led, LOW);
+  digitalWrite(r1_led, LOW);
+  
+}
